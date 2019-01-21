@@ -6,6 +6,7 @@
 ## 问题解决
 经查看subList方法，对subList截取的列表进行修改的时候，会影响原来list的结构。
 
+
 # 注册程序不跑的原因
 ## 问题现象
 注冊程序跑一段时间后，不再注册新用户，程序也没停。
@@ -29,6 +30,15 @@ jstack查看线程状态。发现是数据库连接泄露问题。查看进程�
 
 ## 问题解决
 将关闭数据库连接的代码写在finally的模块里。
+
+
+# 数据库数据修改
+## 问题现象
+在pl/sql oracle的command window里进行insert，显示insert成功，且select查询有返回结果。但是直接对表进行query data，没有显示新插入数据。
+## 问题定位
+没有commit
+## 问题解决
+command window没有进行commit操作，得点击或输入commit，才能提交成功。
 
 
 
