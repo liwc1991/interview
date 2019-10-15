@@ -1,9 +1,20 @@
+# java的putAll的使用注意事项
+## 问题现象
+putAll方法抛NullPointerException，查看源码得知，这竟是putAll方法的唯一一个异常。
+## 问题定位
+public void putAll(Map<? extends K,? extends V> m)
+调用此方法将获得参数m中的所有映射，如果存在key相同的，则被m中的value覆盖。
+此方法实现了Map<K,V>的同名方法，重写了AbstractMap<K,V>中的同名方法。
+当m为空时，该方法就会抛出NullPointerException。
+
+
+
 # mapper.xml的使用注意事项
 ## 问题现象
 编译报错：元素内容必须由格式正确的字符数据或标记组成。。
 ## 问题定位
 Mapper.xml 文件里  < (小于)号 ,   >(大于)号 ,会被认为是括号,需要额外注意,
-解决办法 : 将 < 号换成  &lt;     > 号 换成&gt; 
+解决办法 : 将 < 号换成  &lt;     > 号 换成&gt;  或者用CDATA括起来
 
 
 
