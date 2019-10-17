@@ -6,6 +6,8 @@ public void putAll(Map<? extends K,? extends V> m)
 调用此方法将获得参数m中的所有映射，如果存在key相同的，则被m中的value覆盖。
 此方法实现了Map<K,V>的同名方法，重写了AbstractMap<K,V>中的同名方法。
 当m为空时，该方法就会抛出NullPointerException。
+1、putAll要判断插入的集合是否为空
+2、for(a:list) 要判断list是否为null
 
 
 
