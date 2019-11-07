@@ -1,3 +1,12 @@
+# pom.xml第一行报错
+## 问题现象
+
+## 问题解决
+右击项目名称 -> maven -> update project -> 选中force update of snapshots/release
+等待项目更新完成之后，错误消失。
+错误的原因：pom.xml在中途增加了一些包，而run as 无法将这些包导入到maven dependency中。通过如上操作强制更新项目来解决问题
+
+
 # mapper.xml出现莫名其妙的错误
 ## 问题现象
 
