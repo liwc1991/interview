@@ -1,3 +1,10 @@
+# list校验问题
+## 问题现象
+@Valid @NotEmpty () 的校验不生效了
+## 问题解决
+
+
+
 # insertBatch问题
 ## 问题现象
 ORA-00903: 表名无效
