@@ -51,8 +51,8 @@ ORA-00903: 表名无效
 ## 问题现象
 
 ## 问题解决
-在sys_page_dictlist里进行配置
-
+在sys_page_dictlist里进行配置 
+还要加上@SubPageId 注解
 
 
 
