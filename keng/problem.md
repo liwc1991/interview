@@ -1,6 +1,10 @@
-# BigDecimal的加法
+# BigDecimal的加法 和 除法
 如果这么写：a.add(b); 是不对的；
 如果这么写：a=a.add(b);是对的；
+
+当divide除不尽时BigDecimal num1 = new BigDecimal("10");
+要写成 BigDecimal.divide(BigDecimal divisor, int scale, RoundingMode roundingMode) ;
+
 
 
 # 报错在开发环境没有，在测试环境有
