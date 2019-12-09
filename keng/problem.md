@@ -1,3 +1,8 @@
+# omp 权限过滤
+omp在涉及到产品的查询中都加上了产品的uuid进行过滤
+如果表里确实不存在产品uuid这个字段，需要在OmpDataAuthorityServiceImpl里加过滤。
+
+
 # ajax请求的坑
 ajax不是同步的请求，想用同步用ajaxSync。
 
