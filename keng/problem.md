@@ -1,3 +1,8 @@
+#  数据字典增加码值怎么配置？
+1、sys_page_dictlist 里加配置
+2、ompdictcodelist里加配置
+
+
 #  新加页面需要在哪配置？当前页面在数据库未配置
 1、sys_page里配置页面
 2、controller上加pageid注解
