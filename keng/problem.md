@@ -1,3 +1,7 @@
+#  新加页面需要在哪配置？当前页面在数据库未配置
+1、sys_page里配置页面
+2、controller上加pageid注解
+
 #  下拉框，访问的地址不存在
 maven update project重新扫描，但不知道为啥要这么做
 
