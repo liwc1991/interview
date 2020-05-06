@@ -3,6 +3,7 @@
 @valid 和 @validated 的注解好像不能同时生效，需看源码。
 2、dto校验和 自定义校验会同时进，所以需要注意自定义校验里加判空判断
 3、@Valid @NotEmpty () 的校验不生效了。 这是因为需要在list<A>里的A类上定义一个自定义校验类valid logic，框架才会帮你校验。
+4、校验时如果要显示表格名称，要在html里对table加上name和title属性。
 
 
 
