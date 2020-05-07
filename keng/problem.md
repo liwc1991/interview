@@ -6,7 +6,8 @@
 4、校验时如果要显示表格名称，要在html里对table加上name和title属性。
 
 # ajax请求，controller接收不到参数
-1、
+1、后台发送的是ajaxJson请求，后台需要加get参数才能接收到。或者用requestbody dto方式接收。
+2、
 
 
 #  数据字典增加码值怎么配置？
