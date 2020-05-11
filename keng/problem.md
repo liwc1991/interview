@@ -5,9 +5,9 @@
 3、@Valid @NotEmpty () 的校验不生效了。 这是因为需要在list<A>里的A类上定义一个自定义校验类valid logic，框架才会帮你校验。
 4、校验时如果要显示表格名称，要在html里对table加上name和title属性。
 
-# ajax请求，controller接收不到参数
-1、后台发送的是ajaxJson请求，后台需要加get参数才能接收到。或者用requestbody dto方式接收。
-2、
+# 请求，controller接收不到参数
+1、ajax请求。后台发送的是ajaxJson请求，后台需要加get参数才能接收到。或者用requestbody dto方式接收。
+2、微服务请求。后台参数需要加requestbody才能接收到。
 
 
 #  数据字典增加码值怎么配置？
