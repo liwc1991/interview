@@ -7,7 +7,7 @@
 
 # 请求，controller接收不到参数
 1、ajax请求。后台发送的是ajaxJson请求，后台需要加get参数才能接收到。或者用requestbody dto方式接收。
-2、微服务请求。后台参数需要加requestbody才能接收到。
+2、微服务请求。后台参数需要加requestbody才能接收到。（微服务必须加requestbody）
 
 
 #  数据字典增加码值怎么配置？
