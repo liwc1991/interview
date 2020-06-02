@@ -1,6 +1,8 @@
 # 花半天排查的问题
 1、事务操作 dto的planList没转换出来
+解决方法： 小dto里面不再塞planlist，只在最外面的dto塞planlist。
 2、不同公式的交易对手反显时有问题。
+资金用途下拉查交易对手的ajax请求去掉。
 
 
 # mybatis的相关问题
