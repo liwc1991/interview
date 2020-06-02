@@ -1,3 +1,8 @@
+# 花半天排查的问题
+1、事务操作 dto的planList没转换出来
+2、不同公式的交易对手反显时有问题。
+
+
 # mybatis的相关问题
 1、如果if语句是放在set里面的话，会自动把最后一个语句的逗号过滤
 2、
@@ -12,8 +17,8 @@
 1、不加ignore就可以比较list。
 2、展示名称时，在changerecord里写死。（如公式名称、收息定义名称）
 3、比较list时，要加getprimarykey才能知道list哪个和哪个比。
-4、复核时只查当次的调整明细
-5、复核时多余的字段怎么样才能不比较？cnctTypeName这种怎么不比较
+4、复核时只查当次的调整明细:operationuuid要加上。
+5、复核时多余的字段怎么样才能不比较？cnctTypeName这种怎么不比较:在dto里加cnctTypeName属性。
 6、
 
 # 单例的相关问题
