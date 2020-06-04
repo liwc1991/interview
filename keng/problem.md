@@ -1,3 +1,6 @@
+# java程序跟问题跟丢了
+1、卡在一个sql上，sql也不报错，是因为传入的param参数名对不上。  prdproddealdtlmapper.deleterepeat
+
 # 花半天排查的问题
 1、事务操作 dto的planList没转换出来
 解决方法： 小dto里面不再塞planlist，只在最外面的dto塞planlist。
