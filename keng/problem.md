@@ -81,8 +81,9 @@ taskkill -PID <PID> -F //强制关闭某个进程
 
 
 # omp 权限过滤
-omp在涉及到产品的查询中都加上了产品的uuid进行过滤
+1.omp在涉及到产品的查询中都加上了产品的uuid进行过滤
 如果表里确实不存在产品uuid这个字段，需要在OmpDataAuthorityServiceImpl里加过滤。
+2.如果查询语句不查prod_uuid的话，则不会做数据权限过滤。
 
 
 # ajax请求的坑
