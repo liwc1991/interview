@@ -1,3 +1,9 @@
+# 从缓存中获取信息的方法
+```
+SysDataUtil.getDeptName
+```
+
+
 # 各种注解的作用
 ```
 @DictFormat : html里下拉框显示能显示中文名，而不是码值
