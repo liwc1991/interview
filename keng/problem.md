@@ -1,3 +1,9 @@
+# 各种注解的作用
+```
+@DictFormat : html里下拉框显示能显示中文名，而不是码值
+```
+
+
 # java程序跟问题跟丢了
 1、卡在一个sql上，sql也不报错，是因为传入的param参数名对不上。  prdproddealdtlmapper.deleterepeat
 
