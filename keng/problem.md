@@ -23,6 +23,16 @@ mybatis的一级缓存，mybatis会对查询的sql进行缓存， 查询在同�
 1. 对可能产生缓存的查询结果进行修改时, 不直接对其操作, 而是将结果值复制到中间变量上(注意! 复制值, 而不是引用), 对中间变量进行修改操作,  则不会产生上述问题
 
 2. xml文件 的<select>标签添加 flushCache="true", 禁用此查询的一级缓存
+
+MyBatis的缓存机制
+1、一级缓存(SqlSession级别) ——
+含义：在操作数据库时需要创建SqlSession对象，在对象中有一个HashMap用来存储缓存数据，并且不同的SqlSession之间的缓存数据区域是不会互相影响的。
+作用域：一级缓存的作用域是SqlSession范围，就是当同一个SqlSession中执行两次相同的sql查询语句时，第一次回去数据库中查询数据并写到缓存中，第二次在查询的时候，不会再去数据库中去查询，而是直接在缓存中读取数据。在使用时需要注意：当SqlSession执行DML操作（insert、update、delete）时，MyBatis会清空SqlSession中的一级缓存，这样做的目的是保证缓存中的数据永远是最新的数据，防止出现脏读数据。
+
+2.二级缓存(mapper级别) ——
+含义：使用二级缓存时，多个SqlSession共享一个Mapper的sql语句去操作数据库，得到的数据，同样用HashMap来存储缓存数据，相比较于一级缓存，二级缓存的范围更大，多个SqlSession共享二级缓存，二级缓存时跨SqlSession的。
+作用域：二级缓存的作用域是mapper的同一个namespace，当不同的SqlSession执行相同的namespace下的sql语句，并向sql语句中传递的参数也相同时，第一次回去数据库中查询数据并写到缓存中，第二次在查询的时候，不会再去数据库中去查询，而是直接在缓存中读取数据。
+备注：java的namespace可以理解为java的在同一级别的不同的类加载器,即classloader。java的namespace就是每个类
 ```
 
 
