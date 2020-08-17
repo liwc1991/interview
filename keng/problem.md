@@ -1,4 +1,7 @@
 
+# sql报错
+1、parameters'' not found.availabe parameters are [collection,list]
+1.1 解决：查询的入参需要加个 @Param("recvpamtUuids") 注解，否则xml里无法识别
 
 
 # aws流程回调报错
