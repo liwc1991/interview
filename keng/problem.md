@@ -2,7 +2,7 @@
 # 首页增加oa待办统计方法
 1、main.html里加一段html
 2、pub_boardconfig添加一条记录。
-3、sys_page添加一条记录
+3、sys_page_element添加一条记录
 
 
 # sql报错
