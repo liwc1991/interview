@@ -1,3 +1,7 @@
+# 一个用户进系统后什么菜单都看不见
+1、这个用户被分配了一个权限为空的角色，
+1.1解决：给角色分配一个菜单的权限
+
 
 # 首页增加oa待办统计方法
 1、main.html里加一段html
@@ -8,6 +12,7 @@
 # sql报错
 1、parameters'' not found.availabe parameters are [collection,list]
 1.1 解决：查询的入参需要加个 @Param("recvpamtUuids") 注解，否则xml里无法识别
+2、
 
 
 # aws流程回调报错
