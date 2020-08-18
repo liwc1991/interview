@@ -1,4 +1,10 @@
 
+# 首页增加oa待办统计方法
+1、main.html里加一段html
+2、pub_boardconfig添加一条记录。
+3、sys_page添加一条记录
+
+
 # sql报错
 1、parameters'' not found.availabe parameters are [collection,list]
 1.1 解决：查询的入参需要加个 @Param("recvpamtUuids") 注解，否则xml里无法识别
