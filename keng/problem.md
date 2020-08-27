@@ -139,6 +139,7 @@ SysDataUtil.getDeptName
 #  数据字典增加码值怎么配置？
 1、sys_page_dictlist 里加配置
 2、ompdictcodelist里加配置
+3、各个页面配置相同的dictcode但不同的码值在sys_page_dictlist里面配置。
 
 
 #  新加页面需要在哪配置？当前页面在数据库未配置
