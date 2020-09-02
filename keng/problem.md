@@ -1,3 +1,7 @@
+# 程序报错，日志里没有异常
+问题：1、只能跟到有null的行，但是不显示具体行数。
+解决：因为try catch时没有打印日志信息，在外层的catch里应该把异常栈打出来，log.error(ExceptionUtil.getStackTrace(e))
+
 # aws流程发起报错
 1、报参数为null
 1.1 解决方法：调aws的时候有的参数为空。比如流程定义id没传，为空
