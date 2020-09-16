@@ -52,7 +52,18 @@
 # 继承abstract类时报错
 1、明明写对了方法名和参数，但还是报错
 2、解决方案：把方法体拷贝出来，然后删除掉方法，重新写，把方法体再拷贝进去。
-3、继承非抽象方法时，入参不能有泛型，否则会报错。比如functionname（Map<String> params）
+3、继承抽象方法时，入参不能有泛型，否则会报错。比如
+```
+父类：
+public abstract void setPamtDtl（BokRecvpamtVo pamt, Map<String,Object> params）
+
+@Override
+public void setPamtDtl(BokRecvpamtVo pamt, Map param)  对的
+
+@Override
+public void setPamtDtl（BokRecvpamtVo pamt, Map<String,Object> params） 报错
+
+```
 
 
 
