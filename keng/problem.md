@@ -41,14 +41,6 @@
 3、sys_page_element添加一条记录
 
 
-# sql报错
-1、parameters'' not found.availabe parameters are [collection,list]
-1.1 解决：查询的入参需要加个 @Param("recvpamtUuids") 注解，否则xml里无法识别
-2、
-
-
-
-
 # 继承abstract类时报错
 1、明明写对了方法名和参数，但还是报错
 2、解决方案：把方法体拷贝出来，然后删除掉方法，重新写，把方法体再拷贝进去。
@@ -66,11 +58,18 @@ public void setPamtDtl（BokRecvpamtVo pamt, Map<String,Object> params） 报错
 ```
 
 
-
-# oracle数据库插入时间问题
+# oracle数据库插入时间问题（小公式显示顺序）
 1、如果是在for循环里直接对updateTime设为new Date，则更新时间最后都会变成一样，分辨不出先后顺序
 解决方法：
 for的时候对每个时间+1毫秒
+
+# sql报错、insertBatch问题
+## 问题现象
+问题1：ORA-00903: 表名无效
+问题2：parameters'' not found.availabe parameters are [collection,list]
+## 问题解决
+1、insertBatch前需要判断列表是否为空，如果插空列表会报表名无效的错误。
+2、sql语句的查询的入参需要加个 @Param("recvpamtUuids") 注解，否则xml里无法识别
 
 # mybatis和事务的相关问题
 1、如果if语句是放在set里面的话，会自动把最后一个语句的逗号过滤
@@ -244,13 +243,6 @@ ajax不是同步的请求，想用同步用ajaxSync。
 
 
 
-
-
-# insertBatch问题
-## 问题现象
-ORA-00903: 表名无效
-## 问题解决
-insertBatch前需要判断列表是否为空，如果插空列表会报表名无效的错误。
 
 # pom.xml第一行报错
 ## 问题现象
