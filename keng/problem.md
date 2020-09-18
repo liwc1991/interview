@@ -9,7 +9,11 @@
 
 3、加入线程机制
 
-4、加入进度条机制，这样可以防重复点击，也让界面更友好（JoyinProgress）
+4、加入进度条机制，这样可以防重复点击，也让界面更友好
+```
+前端：JoyinProgress.showInDialog('uploadFileProgressBar')
+后端：progressBarService.updatePercent(pgeid,,uploadPercent,false)
+```
 
 
 # oa接口报超时
