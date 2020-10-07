@@ -11,6 +11,8 @@
 
 4、查询干系人，速度慢
 
+原因：sql里使用了wm_concat函数拼接了干系人，后来改为listagg(fxwt,',') within GROUP (order by fxwt) as fxwt 速度提升10几倍
+
 
 # 项目管理流程查看报错
 解决方法：1、用的数据治理员账户  2、服务器时钟问题 3、根据项目id或产品id查不到，因为产品未成立导致的
