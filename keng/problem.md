@@ -56,9 +56,24 @@
 3.2 原因：有sql报错
 
 
-# 一个用户进系统后什么菜单都看不见
+# 权限问题
+一个用户进系统后什么菜单都看不见
 1、这个用户被分配了一个权限为空的角色，
 1.1 解决：给角色分配一个菜单的权限
+
+2、sql查询如果没有produuid时，sql语句不会过滤权限，这个时候需要在sql里自己加上权限控制
+```
+<if test="userId!=null and userId!=''">
+ and (PROJ_UUID IN
+ (SELECT OBJECT_ID
+ FROM PUB_USER_PERMISSION
+ WHERE USER_ID =#{userId,jdbcType=VARCHAR}) OR EXISTS
+ (SELECT 1
+ FROM PUB_USER_PERMISSION
+ WHERE USER_ID = #{userId,jdbcType=VARCHAR}
+ AND ALL_PERM = 'Y' AND OBJECT_TYPE='PROJ'))
+ </if>
+```
 
 
 # 首页增加oa待办统计方法
