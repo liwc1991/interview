@@ -49,7 +49,8 @@
 1.1 解决方法：调aws的时候有的参数为空。比如流程定义id没传，为空
 
 2、ResponseResult{retcode='500', msg='流程发起失败:exepct '[', but {, pos 1, json : {"data":"NULL","uuId":"NULL"}', responseBody={"data":"NULL","uuId":"NULL"}}
-2.1 参数漏传 uid ,产品/项目ID
+2.1 参数漏传 uid ,产品/项目ID。  
+2.2后来发现跟用户有关系，用tanl发起就报错，用liwch发期间就不报。
 
 # aws流程回调报错
 1、日志里显示：接口服务推送其他系统异常，fail to connect 10.100.6.195:8180
