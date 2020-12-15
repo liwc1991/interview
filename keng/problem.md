@@ -126,6 +126,8 @@ for的时候对每个时间+1毫秒
 3、如果是不同事务的两个sql操作，第二条sql是查不到第一条的数据的。
 4、同一个sql传入的参数一样，但结果不一样
 5、查询语句是不允许重名的，即使传入的参数不一样
+6、mapper的写法  <if test="jhBnftExpportTMark!=null and jhBnftExpportTMark=='Y'.toString() ">。
+ jhBnftExpportTMark传的Y，但是没有进if。
 ```
 问题现象：getformulabyid（），第一次传入查出来的结果是两条，第二次查出来的结果是一条，不知道怎么回事
 解决：  https://blog.csdn.net/wzy999157/article/details/88056933
