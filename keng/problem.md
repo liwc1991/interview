@@ -19,6 +19,8 @@
 
 原因：sql各种抛错
 
+oracle的锁分两种：一种是oracle层面的锁，另一种是dblink那种锁。
+
 此SQL从12月1日开始，一直暂用session得不到释放，产生了很多游标锁，后续通过kill掉 1441这个session，之前的dblink锁，草稿表的锁均得到释放。收据管理下-查询信保基金dblink也可以正常返回。
 
 改进方式：1.不用dblink
