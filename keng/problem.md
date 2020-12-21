@@ -19,6 +19,11 @@
 
 原因：sql各种抛错
 
+此SQL从12月1日开始，一直暂用session得不到释放，产生了很多游标锁，后续通过kill掉 1441这个session，之前的dblink锁，草稿表的锁均得到释放。收据管理下-查询信保基金dblink也可以正常返回。
+
+改进方式：1.不用dblink
+
+2.dblink是事务操作，建议在mapper.xml中涉及dblink的操作，用begin commit end的方式来写。（这点大家可以试试，在什么情况下dblink select是事务操作。）
 
 
 # 项目管理流程查看报错
