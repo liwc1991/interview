@@ -5,6 +5,9 @@
 2.配置tomcat
 解决：小微是用tomcat启动的
 
+3、名称[mfsdata]未在此上下文中绑定。找不到[mfsdata]   
+解决：在tomcat下的context.xml 需要配置
+
 
 # 蚂蚁数据导入
 1、sqlload 正常速度应该为 1分钟导入100万数据，1小时导入6000万数据，1天导入14亿条数据。 且表不加索引的话，sqlload的速度会加快。
