@@ -1,8 +1,8 @@
 # 微众双边
-1、maven菜单找不到
+1、maven菜单找不到 
 解决办法：没有的话，还可以 在任意一个pom文件里，右击；找到，点击“Add as Maven Project”
 
-2.配置tomcat
+2、配置tomcat 
 解决：小微是用tomcat启动的
 
 3、名称[mfsdata]未在此上下文中绑定。找不到[mfsdata]   
