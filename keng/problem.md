@@ -42,6 +42,13 @@
 （2）install命令
 （3）SNAPSHOT pom文件类型
 
+6、idea debug模式下，在断点停止后，仍然往下执行
+Preferences -> Build,Execution,Deployment -> Debugger 找到Java那一栏下边可以看到 Kill the debug process immediately 选项，勾选后点击确定就可以了。
+
+或是直接在设置搜索框里输入 Kill the debug process immediately 后，就会出现这个复选框。
+
+7、
+
 
 
 
