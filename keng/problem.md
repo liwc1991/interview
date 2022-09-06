@@ -47,8 +47,10 @@ Preferences -> Build,Execution,Deployment -> Debugger 找到Java那一栏下边�
 
 或是直接在设置搜索框里输入 Kill the debug process immediately 后，就会出现这个复选框。
 
-7、
-
+7、在多线程时使用@Autowired总是获取不到bean
+原因是：new thread不在spring容器中，也就无法获得spring中的bean对象。
+解决方法：增加一个BeanContext类，进行手动获取
+this.testService= BeanContext.getApplicationContext().getBean(TestService.class);
 
 
 
