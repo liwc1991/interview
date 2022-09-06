@@ -52,6 +52,9 @@ Preferences -> Build,Execution,Deployment -> Debugger 找到Java那一栏下边�
 解决方法：增加一个BeanContext类，进行手动获取
 this.testService= BeanContext.getApplicationContext().getBean(TestService.class);
 
+8、本地启动时，用postman发请求报http 404 未找到
+原因：一般是因为请求的地址没配置对
+
 
 
 # 生产事故
