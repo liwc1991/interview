@@ -52,7 +52,11 @@ Preferences -> Build,Execution,Deployment -> Debugger 找到Java那一栏下边�
 解决方法：增加一个BeanContext类，进行手动获取
 this.testService= BeanContext.getApplicationContext().getBean(TestService.class);
 
-8、本地启动时，用postman发请求报http 404 未找到
+8、在主线程里直接开线程，子线程的log获取不到主线程的@log4j 注解，导致日志无法打印
+
+9、log输出时用占位符，用字符串拼接的方式速度会慢
+
+10、本地启动时，用postman发请求报http 404 未找到
 原因：一般是因为请求的地址没配置对
 
 
