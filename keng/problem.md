@@ -1,4 +1,6 @@
-
+# Java异步调用不生效
+ApplicationContext.publishEvent ——Java异步调用的一种方式
+原因：里面的sql有报错
 
 
 # 微众双边
