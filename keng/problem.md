@@ -62,6 +62,13 @@ this.testService= BeanContext.getApplicationContext().getBean(TestService.class)
 原因：一般是因为请求的地址没配置对
 
 
+11、
+org.springframework.jdbc.BadSqlGrammarException:
+### Error updating database. Cause: java.sql.sQLSyntaxErrorException: ORA-01790: 表达式必须具有与对应表达式相同的数据类型
+
+原因：批量插入时，某个字段为null的和不为null的不能放在同一个list里插入
+
+
 
 # 生产事故
 1、界面特别慢（影响1个小时）
