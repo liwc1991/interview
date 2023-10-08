@@ -68,6 +68,11 @@ org.springframework.jdbc.BadSqlGrammarException:
 
 原因：批量插入时，某个字段为null的和不为null的不能放在同一个list里插入
 
+12、nullpointException ： 存量资金导入填了0，导致空指针
+
+
+13、java.lang.ArithmeticException: / by zero  ： 生产环境报错，但测试环境没报错
+
 
 
 # 生产事故
