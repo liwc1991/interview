@@ -71,10 +71,14 @@ org.springframework.jdbc.BadSqlGrammarException:
 
 原因：批量插入时，某个字段为null的和不为null的不能放在同一个list里插入
 
-12、nullpointException ： 存量资金导入填了0，导致空指针
+12、Error updating database.  Cause: java.sql.SQLException: sql injection violation, syntax error: ERROR. token : FROM, pos : 499 :
+
+原因：sql写错了，多字段或少字段
+
+13、nullpointException ： 存量资金导入填了0，导致空指针
 
 
-13、java.lang.ArithmeticException: / by zero  ： 生产环境报错，但测试环境没报错
+14、java.lang.ArithmeticException: / by zero  ： 生产环境报错，但测试环境没报错
 
 
 
