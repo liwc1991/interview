@@ -80,6 +80,12 @@ org.springframework.jdbc.BadSqlGrammarException:
 
 14、java.lang.ArithmeticException: / by zero  ： 生产环境报错，但测试环境没报错
 
+测试环境配置的方案参数跟生产不一样。
+
+15、fail to load application 远程主机强迫关闭了一个现有连接怎么解决
+
+怀疑：是nacos配置的问题
+
 
 
 # 生产事故
