@@ -84,8 +84,7 @@ org.springframework.jdbc.BadSqlGrammarException:
 
 15、fail to load application 远程主机强迫关闭了一个现有连接怎么解决
 
-怀疑：是nacos配置的问题
-
+怀疑：最终确认是数据库的问题。
 
 
 # 生产事故
