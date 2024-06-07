@@ -88,6 +88,10 @@ org.springframework.jdbc.BadSqlGrammarException:
 
 最终确认是数据库的问题。
 
+16、java: Internal error in the mapping processor: java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "resource" is null
+
+
+
 
 # 生产事故
 1、界面特别慢（影响1个小时）
