@@ -90,6 +90,9 @@ org.springframework.jdbc.BadSqlGrammarException:
 
 16、java: Internal error in the mapping processor: java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "resource" is null
 
+File | Settings | Build, Execution, Deployment | Compiler | user-local build process vm options
+
+-Djps.track.ap.dependencies=false
 
 
 
